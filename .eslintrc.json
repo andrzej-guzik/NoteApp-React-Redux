@@ -19,7 +19,8 @@
 	"globals": {
         "React": true,
 		"describe": true,
-		"it": true
+		"it": true,
+		"beforeEach": true
     },
     "rules": {
         "indent": [
