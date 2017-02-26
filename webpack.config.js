@@ -30,9 +30,9 @@ const config = {
         ]
     },
     plugins: [
-    	new webpack.optimize.CommonsChunkPlugin({
-			names: ["vendor", "manifest"]
-        }),
+    	// new webpack.optimize.CommonsChunkPlugin({
+		// 	names: ["vendor", "manifest"]
+        // }),
         new ExtractTextPlugin("styles.css"),
         new HtmlWebpackPlugin({
             template: "index.html"

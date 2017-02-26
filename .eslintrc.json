@@ -17,7 +17,9 @@
         "react"
     ],
 	"globals": {
-        "React": true
+        "React": true,
+		"describe": true,
+		"it": true
     },
     "rules": {
         "indent": [
