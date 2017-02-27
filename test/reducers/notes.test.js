@@ -1,5 +1,5 @@
 import { expect } from "../test_helper";
-import { ADD_NOTE, EDIT_NOTE, REMOVE_NOTE } from "../../src/actions/types";
+import { ADD_NOTE, ADD_NOTES, EDIT_NOTE, REMOVE_NOTE } from "../../src/actions/types";
 import { notesReducer } from "../../src/reducers/notes";
 
 describe("Notes Reducer", () => {
@@ -10,6 +10,12 @@ describe("Notes Reducer", () => {
 	it("handle ADD_NOTE action", () => {
 		const action = {type: ADD_NOTE, payload: "new note"};
 		expect(notesReducer([], action)).to.eql(["new note"]);
+	});
+
+	it("handle ADD_NOTES action", () => {
+		const notes = [{id: "123aaa", text: "Some note"}, {id: "123bbb", text: "New note"}];
+		const action = {type: ADD_NOTES, payload: notes};
+		expect(notesReducer([], action)).to.eql(notes);
 	});
 
 	it("handle EDIT_NOTE action", () => {

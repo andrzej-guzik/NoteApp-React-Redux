@@ -1,6 +1,6 @@
 import { expect } from "../test_helper";
-import { ADD_NOTE, EDIT_NOTE, REMOVE_NOTE } from "../../src/actions/types";
-import { addNote, editNote, removeNote } from "../../src/actions/index";
+import { ADD_NOTE, ADD_NOTES, EDIT_NOTE, REMOVE_NOTE } from "../../src/actions/types";
+import { addNote, addNotes, editNote, removeNote } from "../../src/actions/index";
 
 describe("Actions", () => {
 	describe("addNote", () => {
@@ -12,6 +12,19 @@ describe("Actions", () => {
 		it("has a correct payload", () => {
 			const action = addNote("Do testing");
 			expect(action.payload).to.equal("Do testing");
+		});
+	});
+
+	describe("addNotes", () => {
+		it("has a correct type", () => {
+			const action = addNotes();
+			expect(action.type).to.equal(ADD_NOTES);
+		});
+
+		it("has a correct payload", () => {
+			const notes = [{id: "abc123", text: "Some note"}, {id: "abc1234", text: "New note"}];
+			const action = addNotes(notes);
+			expect(action.payload).to.equal(notes);
 		});
 	});
 

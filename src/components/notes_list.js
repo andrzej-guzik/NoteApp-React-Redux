@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link, hashHistory } from "react-router";
 
 import { addNotes, removeNote } from "../actions/index";
+import notesAPI from "../api/notes_API";
 
 class NotesList extends Component {
 	constructor(props) {
@@ -10,6 +11,13 @@ class NotesList extends Component {
 
 		this.url = "";
 		this.imgTest = /(https?:\/\/.*\.(?:png|jpg|svg|gif))/im;
+
+		this.storedNotes = notesAPI.getNotes();
+		this.props.addNotes(this.storedNotes);
+	}
+
+	componentDidUpdate() {
+		notesAPI.setNotes(this.props.notes);
 	}
 
 	renderNotes() {

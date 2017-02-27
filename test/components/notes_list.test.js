@@ -5,7 +5,8 @@ describe("NotesList", () => {
 	let component;
 
 	beforeEach(() => {
-		component = renderComponent(NotesList, null, {notes: [{id: 1, text: "Some note"}, {id: 2, text: "Some new note"}]});
+		localStorage.removeItem("notes");
+		component = renderComponent(NotesList, null, {notes: [{id: 1, text: "Some note"}, {id: 2, text: "Some new note"}]});		
 	});
 
 	it("show a LI for each note", () => {

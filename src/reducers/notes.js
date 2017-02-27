@@ -1,4 +1,4 @@
-import { ADD_NOTE, EDIT_NOTE, REMOVE_NOTE } from "../actions/types";
+import { ADD_NOTE, ADD_NOTES, EDIT_NOTE, REMOVE_NOTE } from "../actions/types";
 
 export const notesReducer = (state = [], action) => {
 
@@ -6,6 +6,9 @@ export const notesReducer = (state = [], action) => {
 
 	case ADD_NOTE:
 		return [action.payload, ...state];
+
+	case ADD_NOTES:
+		return [...action.payload, ...state];
 
 	case EDIT_NOTE:
 		var notes = state.filter(note => note.id !== action.payload.id);
