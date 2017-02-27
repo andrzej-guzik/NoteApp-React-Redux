@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start",
     "start": "webpack-dev-server --inline --hot",
-    "build": "set \"NODE_ENV=production\" && rimraf dist && webpack -p"
+    "build": "set \"NODE_ENV=production\" && rimraf docs && webpack -p"
   },
   "author": "",
   "license": "ISC",

@@ -11,7 +11,7 @@ const config = {
 		vendor: VENDOR_LIBS
 	},
 	output: {
-		path: path.resolve(__dirname, "dist"),
+		path: path.resolve(__dirname, "docs"),
         filename: "[name].[hash].js"
 	},
 	 module: {
@@ -40,9 +40,9 @@ const config = {
         ]
     },
     plugins: [
-    	// new webpack.optimize.CommonsChunkPlugin({
-		// 	names: ["vendor", "manifest"]
-        // }),
+    	new webpack.optimize.CommonsChunkPlugin({
+			names: ["vendor", "manifest"]
+        }),
         new ExtractTextPlugin("styles.css"),
         new HtmlWebpackPlugin({
             template: "index.html"
