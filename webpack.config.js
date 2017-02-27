@@ -26,6 +26,16 @@ const config = {
                 loader: ExtractTextPlugin.extract({
                     loader: "css-loader?importLoaders=1!postcss-loader"
                 })
+            },
+			{
+                test: /\.(jpe?g|png|svg)$/,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: { limit: 40000 }
+                    },
+                    "image-webpack-loader"
+                ]
             }
         ]
     },

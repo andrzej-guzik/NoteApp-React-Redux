@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+}
+
+body {
+	background: #eee;
+}
+
+h1, h2, h3, h4 {
+	text-align: center;
+	font-weight: 300;
+	color: #444;
+}
+
+p {
+	color: #666;
+}
+
+img {
+    max-width: 100%;
+}

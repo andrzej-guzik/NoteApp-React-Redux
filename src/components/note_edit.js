@@ -3,7 +3,7 @@ import { Link, hashHistory } from "react-router";
 import { connect } from "react-redux";
 
 import { editNote } from "../actions/index";
-import { currentDate } from "../helpers";
+import { currentDate, scrollToTop } from "../helpers";
 
 class NoteEdit extends Component {
 	constructor(props) {
@@ -14,6 +14,8 @@ class NoteEdit extends Component {
 
 		this.onTextChange = this.onTextChange.bind(this);
 		this.onFormSubmit = this.onFormSubmit.bind(this);
+
+		scrollToTop();
 	}
 
 	componentWillMount() {
@@ -47,15 +49,15 @@ class NoteEdit extends Component {
 
 	render() {
 		return (
-			<div className="note-edit">
-				<h3>Edit message: </h3>
+			<div className="note-edit col-lg-8 offset-lg-2">
+				<h3>Edit note: </h3>
 				<form onSubmit={this.onFormSubmit}>
 					<textarea
 						className="form-control"
 						value={ this.state.text }
 						onChange={ this.onTextChange }/>
-					<button type="submit" className="btn btn-primary">Accept Changes</button>
-					<Link to="/" className="btn btn-secondary">Cancel</Link>
+					<button type="submit" className="btn btn-success">Accept Changes</button>
+					<Link to="/" className="btn btn-warning">Cancel</Link>
 				</form>
 			</div>
 		);

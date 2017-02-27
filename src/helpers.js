@@ -13,4 +13,12 @@ export const currentDate = () => {
 	if (currentMinutes < 10) currentMinutes = `0${currentMinutes}`;
 
 	return `${currentDay}/${currentMonth}/${currentYear} ${currentHour}:${currentMinutes}:${currentSeconds}`;
-} ;
+};
+
+export const scrollToTop = () => {
+	const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+	if (scrollTop > 0) {
+		window.scrollBy(0, -100);
+		setTimeout(scrollToTop, 10);
+	}
+};

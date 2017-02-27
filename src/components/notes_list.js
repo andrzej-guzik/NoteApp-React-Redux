@@ -27,16 +27,16 @@ class NotesList extends Component {
 			return (
 				<div className="notes-list__item col-lg-6" key={note.id}>
 					<li className="card">
-						<img className="note-image card-img-top" src={this.url} alt="" />
+						<img className="card-image card-img-top" src={this.url} alt="" />
 						<div className="card-block">
-							<p className="card-title">{note.text}</p>
-							<p className="note-date">{note.createdAt}</p>
+							<p className="card-text">{note.text}</p>
+							<p className="note-date">Created: {note.createdAt}</p>
 							<button
 								className="btn btn-danger"
 								onClick={() => this.props.removeNote(note.id)}>
 								Delete
 							</button>
-							<Link to={`/${note.id}`} className="btn btn-warning">Edit</Link>
+							<Link to={`/${note.id}`} className="btn btn-info">Edit</Link>
 						</div>
 					</li>
 				</div>

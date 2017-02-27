@@ -1,0 +1,56 @@
+.app {
+	background: url("images/bg_tech.jpg") no-repeat;
+	background-size: cover;
+	height: 100%;
+
+	&__title {
+		font-size: 3rem;
+		padding: 2rem 0;
+	}
+}
+
+.add-note-bar {
+	&__btn {
+		display: block;
+		margin: 2rem auto;
+	}
+}
+
+.notes-list {
+	margin: 0;
+	padding: 0;
+	
+	&__item {
+		.card {
+			margin-bottom: 1rem;
+			background: #f7f8f9;
+
+			.card-image {
+				max-width: 15rem;
+				margin: 0 auto;
+				padding: 1rem;
+			}
+
+			.note-date {
+				margin-top: 2rem;
+				font-size: .75rem;
+				text-align: right;
+			}
+
+			.btn {
+				margin-right: .5rem;
+			}
+		}
+	}
+}
+
+.note-edit {
+	background: #f7f8f9;
+	margin-bottom: 2rem;
+	padding: 3rem;
+
+	.btn {
+		margin-top: 2rem;
+		margin-right: .5rem;
+	}
+}
