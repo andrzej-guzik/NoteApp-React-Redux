@@ -1,0 +1,49 @@
+.add-note-bar {
+	&__form {
+		width: 100%;
+		margin: 0 auto;
+
+		@mixin atLarge {
+			width: 50%;
+		}
+
+		& label {
+			display: block;
+			margin: 0 auto;
+			font-size: 1.5rem;
+			font-weight: 300;
+			text-align: center;
+			color: #555;
+		}
+
+		textarea {
+			width: 100%;
+			min-height: 6.25rem;
+			border: 2px solid rgba(65, 54, 0, .2);
+			margin-top: .5rem;
+			margin-bottom: 2rem;
+			padding: 1rem;
+			font-size: 1.25rem;
+			color: #555;
+
+			&:focus {
+				border: 2px solid #2980b9;
+			}
+		}
+
+		.btn {
+			display: block;
+			background: #3498db;
+			border: none;
+			margin: 0 auto;
+			padding: 1rem 4rem;
+			font-size: 1.125rem;
+			color: #fff;
+			cursor: pointer;
+
+			&:hover {
+				background: #2980b9;
+			}
+		}
+	}
+}

@@ -1,4 +1,8 @@
-@import "../node_modules/bootstrap/dist/css/bootstrap";
-
+@import "style/_mixins";
 @import "style/_global";
+@import "style/_site-wrapper";
+@import "style/_btn";
 @import "style/_app";
+@import "style/_add-note-bar";
+@import "style/_notes-list";
+@import "style/_note";

@@ -1,0 +1,13 @@
+.site-wrapper {
+	padding: 0 1.5625rem;
+	max-width: 75rem;
+	margin: 0 auto;
+
+	@mixin atMedium {
+		padding: 0 2.8125rem;
+	}
+
+	@mixin atLarge {
+		padding: 0;
+	}
+}

@@ -22,7 +22,7 @@ describe("AddNoteBar", () => {
 		});
 
 		it("clear the input when submitted", () => {
-			component.simulate("submit");
+			component.find("form").simulate("submit");
 			expect(component.find("textarea")).to.have.value("");
 		});
 	});

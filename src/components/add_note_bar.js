@@ -41,14 +41,14 @@ class AddNoteBar extends Component {
 
 	render() {
 		return (
-			<div className="add-note-bar col-lg-8 offset-lg-2">
-				<form  onSubmit={this.onFormSubmit}>
+			<div className="add-note-bar">
+				<form className="add-note-bar__form" onSubmit={this.onFormSubmit}>
+					<label for="note-textarea">Enter your note</label>
 					<textarea
-						className="form-control"
-						placeholder="Enter your note"
+						id="note-textarea"
 						value={this.state.text}
 						onChange={this.onTextChange}/>
-					<button type="submit" className="add-note-bar__btn btn btn-primary">Add note</button>
+					<button type="submit" className="btn">Add note</button>
 				</form>
 			</div>
 		);

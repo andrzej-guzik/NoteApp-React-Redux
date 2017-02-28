@@ -1,0 +1,48 @@
+.note {
+	position: relative;
+	background: #f7f8f9;
+	width: 300px;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	overflow:auto;
+
+	@mixin atMedium {
+		padding: 2rem;
+	}
+
+	p {
+		margin: 0;
+		margin-bottom: 1.5rem;
+		font-size: 1.125rem;
+		font-weight: 300;
+	}
+
+	.note-date {
+		margin-bottom: 4.5rem;
+		font-size: .875rem;
+		font-weight: 400;
+		text-align: right;
+	}
+
+	img {
+		margin-bottom: 1rem;
+	}
+
+	.btn-group {
+		position: absolute;
+		bottom: 2rem;
+	}
+
+	form {
+		textarea {
+			width: 100%;
+			min-height: 100px;
+			border: none;
+			margin-top: 1rem;
+			padding: .7rem;
+			font-size: 1.25rem;
+			color: #555;
+		}
+	}
+}

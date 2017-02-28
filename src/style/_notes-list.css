@@ -1,0 +1,9 @@
+.notes-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0;
+	margin-top: 3rem;
+	padding: 0;
+	list-style: none;
+}

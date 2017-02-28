@@ -6,12 +6,11 @@ import NotesList from "./notes_list";
 export default class App extends Component {
 	render() {
 		return (
-			<div className="container">
+			<section className="site-wrapper">
 				<h1 className="app__title">Note App</h1>
 				<AddNoteBar />
-				{this.props.children}
 				<NotesList />
-			</div>
+			</section>
 		);
 	}
 }

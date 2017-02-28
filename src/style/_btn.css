@@ -1,0 +1,40 @@
+.btn {
+	padding: .4rem 1.5rem;
+	border: none;
+	font-size: 1rem;
+	color: #fff;
+	cursor: pointer;
+	margin-right: .5rem;
+
+	&--succes {
+		background: #2ecc71;
+
+		&:hover {
+			background: #27ae60;
+		}
+	}
+
+	&--info {
+		background: #95a5a6;
+
+		&:hover {
+			background: #7f8c8d;
+		}
+	}
+
+	&--danger {
+		background: #e74c3c;
+
+		&:hover {
+			background: #c0392b;
+		}
+	}
+
+	&--warning {
+		background: #34495e;
+
+		&:hover {
+			background: #2c3e50;
+		}
+	}
+}
