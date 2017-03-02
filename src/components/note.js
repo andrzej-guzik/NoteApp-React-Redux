@@ -77,7 +77,7 @@ class Note extends Component {
 			return (
 				<div>
 					<form onSubmit={this.onFormSubmit}>
-						<label for="edit-textarea">Edit note:</label>
+						<label htmlFor="edit-textarea">Edit note:</label>
 						<textarea id="edit-textarea" value={this.state.text} onChange={this.onTextChange} />
 						<button className="btn btn--succes" onClick={this.onAccept}>Accept</button>
 					</form>

@@ -43,7 +43,7 @@ class AddNoteBar extends Component {
 		return (
 			<div className="add-note-bar">
 				<form className="add-note-bar__form" onSubmit={this.onFormSubmit}>
-					<label for="note-textarea">Enter your note</label>
+					<label htmlFor="note-textarea">Enter your note</label>
 					<textarea
 						id="note-textarea"
 						value={this.state.text}

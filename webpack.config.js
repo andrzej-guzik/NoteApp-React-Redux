@@ -18,7 +18,7 @@ const config = {
         rules: [
             {
 				test: /\.jsx?$/,
-                use: ["react-hot-loader", "babel-loader", "eslint-loader"],
+                use: ["react-hot-loader", "babel-loader"],
                 exclude: /node_modules/
             },
             {
@@ -40,9 +40,9 @@ const config = {
         ]
     },
     plugins: [
-    	new webpack.optimize.CommonsChunkPlugin({
-			names: ["vendor", "manifest"]
-        }),
+   //  	new webpack.optimize.CommonsChunkPlugin({
+			// names: ["vendor", "manifest"]
+   //      }),
         new ExtractTextPlugin("styles.css"),
         new HtmlWebpackPlugin({
             template: "index.html"
